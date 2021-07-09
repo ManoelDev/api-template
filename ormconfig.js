@@ -7,12 +7,8 @@ const connection = {
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  migrations: [
-    `./${isDevelopment ? 'src' : 'dist'}/database/migrations/*{.ts,.js}`,
-  ],
-  cli: {
-    migrationsDir: `./${isDevelopment ? 'src' : 'dist'}/database/migrations`,
-  },
+  migrations: [`./${isDevelopment ? 'src' : 'dist'}/database/migrations/*{.ts,.js}`,],
+  cli: { migrationsDir: `./${isDevelopment ? 'src' : 'dist'}/database/migrations`, },
   entities: [`./${isDevelopment ? 'src' : 'dist'}/database/entities/**/*{.ts,.js}`],
   logging: process.env.DB_LOGGING_LEVEL ? process.env.DB_LOGGING_LEVEL.split(',') : undefined,
 }
