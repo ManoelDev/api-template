@@ -29,7 +29,11 @@
         "ts": "never"
       }
     ],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-shadow": "off",
+    "class-methods-use-this": "off"
   },
   "settings": {
     "import/resolver": {
